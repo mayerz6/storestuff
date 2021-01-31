@@ -1,6 +1,13 @@
 /* Define the DEFAULT UI styles for all pages on the site. */
 
 div#fbRegion { outline: 1px solid #000; }
+div#fbRegion form > * { margin-top: 1em; margin-bottom: 1em; margin-left: 1em; }
+div#fbRegion textarea { outline: 1px solid #000; width: 428px; height: 130px; }
+div#imgRegion img { outline: 2px solid #ccc; width: 378px; height: 278px; margin-top: 2em; }
+div#main section#screen { width: 480px; }
+div#main section#screen { width: 480px; }
+header { outline: 1px solid #000; margin: 0em 0em; height: 80px; }
+footer { outline: 1px solid #000; margin: 2em 0em; height: 280px; }
 
 
 /* Define the UI layout for MOBILE devices */
