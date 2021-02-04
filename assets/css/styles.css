@@ -1,20 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;1,900&display=swap");
 /* Define the DEFAULT UI styles for all pages on the site. */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
-div#fbRegion { outline: 1px solid #000; }
-div#fbRegion form > * { margin-top: 1em; margin-bottom: 1em; margin-left: 1em; }
-div#fbRegion textarea { outline: 1px solid #000; width: 428px; height: 130px; }
-div#imgRegion img { outline: 2px solid #ccc; width: 378px; height: 278px; margin-top: 2em; }
-div#main section#screen { width: 480px; }
-div#main section#screen { width: 480px; }
-header { outline: 1px solid #000; margin: 0em 0em; height: 80px; }
-footer { outline: 1px solid #000; margin: 2em 0em; height: 280px; }
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
 
+body {
+  margin: 0;
+  font-family: 'Lato';
+}
+
+/* HEADER region */
+header {
+  outline: 1px solid #000;
+  margin: 0em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: space-between;
+  padding: 0.4em 1em;
+  background-color: #ff0000;
+}
+
+nav {
+  display: none;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+header img#logo {
+  margin-bottom: 0.8em;
+  margin-top: 1.4em;
+  width: 100%;
+}
+
+header a#logo-link {
+  width: 10%;
+  margin: 0em;
+  padding: 0em;
+  outline: 0px solid #000;
+}
+
+header img#menu-icon {
+  width: 14%;
+  cursor: pointer;
+}
+
+/* Main CONTENT region */
+div#main {
+  padding: 1em;
+  outline: 0px solid #ccc;
+  margin-bottom: 1em;
+}
+
+div#main h1 {
+  text-align: center;
+  border-bottom: 1px solid #444;
+  outline: 0px solid #444;
+  font-size: 42pt;
+}
+
+div#main section#screen {
+  /* width: 480px; */
+  outline: 0px solid #000;
+}
+
+div#main section#screen p {
+  font-size: 16pt;
+  font-weight: 500;
+  text-align: center;
+}
+
+div#grid {
+  background-color: #6BA4A9;
+  color: #fafafa;
+  padding: 1em;
+  outline: 2px solid #aaa;
+  margin-bottom: 1em;
+}
+
+div#grid section#features {
+  /* width: 480px; */
+  outline: 1px solid #000;
+}
+
+div#main div#imgRegion {
+  /* width: 480px; */
+  outline: 1px solid #000;
+}
+
+div#fbRegion {
+  outline: 1px solid #000;
+}
+
+div#fbRegion form > * {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+div#fbRegion textarea {
+  outline: 1px solid #000;
+  width: 428px;
+  height: 130px;
+}
+
+div#imgRegion img {
+  outline: 2px solid #ccc;
+  width: 378px;
+  height: 278px;
+  margin-top: 2em;
+}
+
+/* FOOTER region */
+footer {
+  outline: 1px solid #000;
+  margin: 2em 0em;
+  height: 80px;
+}
 
 /* Define the UI layout for MOBILE devices */
-
-
 /* Define the UI layout for TABLET devices */
-
-
+/* Define the UI layout for LAPTOP devices */
 /* Define the UI layout for DESKTOP devices */
-
+/* Define the UI layout for EXTRA LARGE screens */
+/*# sourceMappingURL=styles.css.map */

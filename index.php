@@ -24,12 +24,23 @@
     <body>
 
         <header>
-            <b>***HEADER BLOCK***</b>
+           <!-- <b>***HEADER BLOCK***</b> -->
+               <a id="logo-link" href="index.php"><img id="logo" src="favicon.png" alt="logo" /></a>
+                    <img id="menu-icon" src="assets/img/menu-2.png" />
+                    <nav>
+                        <ul id="nav">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
         </header>
+
         <div id="main">
-            <h1>Let's Protect Your Stuff For You!</h1>
+            <h1>Let's Protect Your Stuff!</h1>
                 <section id="screen">
-                    <p>Explore Our Storage Space, Co-Working Space, Co-Warehouse & Services</p>
+                    <p>Explore Our Storage Space</p>
                         <div id="fbRegion">
                             <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
                                 <span>Name: </span><input type="text" name="name" value="<?php echo htmlspecialchars($_POST['name'] ?? ''); ?>"  /><b><?php echo $errors['Name'] ?? ''; ?></b><br>
@@ -41,9 +52,19 @@
                             </div>
                  </section>
                  <div id="imgRegion"><img src="./assets/img/warehouse-building.png" /></div>
+        </div>
+
+                <div id="grid">
+                    <section id="features">
+                        <article class="options"><h3>Keep It!</h3></article>
+                        <article class="options"><h3>Keep It!</h3></article>
+                        <article class="options"><h3>Keep It!</h3></article>
+                        <article class="options"><h3>Keep It!</h3></article>    
+                    </section>
                 </div>
+                
                 <footer>
-                    <!-- ***FOOTER BLOCK***</b> -->
+                    <!-- ***FOOTER BLOCK*** -->
 
                     <span>&copy; Copyright Storestuff <?php echo date("Y"); ?> | All Rights Reserved. </span>
                 </footer>

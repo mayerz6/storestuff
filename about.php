@@ -6,7 +6,7 @@
 <html lang="en">
     <head>
         <title>Store Stuff</title>
-            <link rel="text/stylesheet" href="" />    
+            <link rel="text/stylesheet" href="assets/css/styles.css" />    
     </head>
 
     <body>
