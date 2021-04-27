@@ -4,15 +4,15 @@
 
 <html lang="en">
 
-            <head>
-                <meta name="viewport" content="width=device-width,initial-scale=1.0">
-                <title>Store Stuff</title>
-                <link rel="icon" href="favicon.png" type="image/gif" sizes="16x16">    
-                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-                <link rel="stylesheet" href="assets/css/styles.css" />    
-                <script defer src="assets/js/quote.js"></script>
-                <script defer src="assets/js/nav.js"></script>
-            </head>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Store Stuff</title>
+        <link rel="icon" href="favicon.png" type="image/gif" sizes="16x16">    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/styles.css" />    
+        <script defer src="assets/js/nav.js"></script>
+        <script defer src="assets/js/contact.js"></script>
+    </head>
 
     <body>
 
@@ -26,20 +26,19 @@
                     </div>
                     <nav class="hidden">
                         <ul id="nav">
-                            <li><a class="active" href="./">Request A Quote</a></li>
+                            <li><a href="./">Request A Quote</a></li>
                             <li><a href="./services.php">Services</a></li>
-                            <li><a href="./contact.php">Contact</a></li>
+                            <li><a class="active" href="./contact.php">Contact</a></li>
                             <li id="tel"><i class="fa fa-phone fa-2x"></i><a href="tel:+12462319428">(246) 231-9428</a></li>
                         </ul>
                     </nav>
         </header>
-        <!-- *** END OF HEADER BLOCK *** -->
 
         <!-- *** MAIN CONTENT BLOCK *** -->
         <div id="main">
             <h1>Storage Space For Rent</h1>
                 <section id="screen">
-                    <p>Request A Quote</p>
+                    <p>Have Any Questions</p>
                                 
                                   <div id="response"></div>
                                     
@@ -51,19 +50,16 @@
                                <b id="nameErr"></b>
                                <label>Email: </label><input id="email" type="email" name="email" value="<?php echo htmlspecialchars($_POST['email'] ?? ''); ?>" />
                                <b id="emailErr"></b>
-                               <h4>What type of quote do you need?</h4>
-                          <fieldset>
-                          <label>Residential <input type="radio" name="businessType" value="Residential" checked /></label>
-                                <label>Business <input type="radio" name="businessType" value="Business" /></label>
-                          </fieldset>
-                               <label>Subject: </label><input id="subject" type="text" name="subject" value="<?php echo htmlspecialchars($_POST['subject'] ?? ''); ?>" />
-                               <b id="subjectErr"></b>
-                                   <label>What can we help you with? </label>
+                                  <label>What can we help you with? </label>
                                    <select name="query" id="query">
-                                        <option value="0">-- Query Selection --</option>
-                                        <option value="1">Moving</option>
-                                        <option value="2">Storage</option>
-                                        <option value="3">Moving &amp; Storage</option>
+                                        <option value="0">-- Select Topic --</option>
+                                        <option value="1">General Moving Queries</option>
+                                        <option value="2">Quote &amp; Pricing Queries</option>
+                                        <option value="3">Reservation Queries Or Changes</option>
+                                        <option value="4">Assistance With Your Next Move</option>
+                                        <option value="5">Advertising Queries</option>
+                                        <option value="6">Website Queries</option>
+                                        <option value="7">Data Pricey Requests</option>
                                     </select>
                                     <b id="queryErr"></b>
                                <label>Message: </label><textarea id="message" type="text" name="message"><?php echo htmlspecialchars($_POST['message'] ?? ''); ?></textarea>
@@ -72,12 +68,28 @@
                                
                                <input id="button" type="submit" value="Send Message" name="submit" />
                                <em>We love to listen and are eager to assist with your next storage project! </em>
-                  
-                         
                             </form>
+
+                            <div id="contact-info">
+                    <h4>Let's Stay In Touch</h4>
+                      
+                          <span>
+                            <b>Our customer support is available:</b><br>
+                            Monday-Friday 7 a.m.-7 p.m. CST<br>
+                            Saturday 9 a.m.-4 p.m. CST.<br><br>
+                            </span>
+                            
+                            <span>
+                            <b>Phone Call</b> or <b>WhatsApp Message: <a style="text-decoration: none; color: #ec7048;" href="tel:+12462319428">(246) 231-9428</a></b>
+                            <br>
+                            (monitored during regular business hours)<br><br>             
+                            </span>
+                            <span>               
+                              <em>We love to listen and are eager to assist with your next storage project! </em>
+                            </span>
+                </div>
                         </div>
                  </section>
-
                  <section id="details">
                 
                         <div>
@@ -104,18 +116,17 @@
                  <h1>Secure, Convenient...Yours!</h1>
           
         </div>
-        <!-- *** END OF MAIN CONTENT BLOCK *** -->
            
         <div id="banner"><h1>Professional Storage Services</h1></div>
-
-        <!-- *** FOOTER CONTENT BLOCK *** -->       
-                <footer>                                    
-                    <!-- *** COPYRIGHT SECTION *** -->      
-                    <div id="footer"><span>&copy; Copyright Storestuff <?php echo date("Y"); ?> | All Rights Reserved. </span></div>
-            
-                </footer>
-                <!-- *** END OF FOOTER CONTENT BLOCK *** -->
-                
-                
+          
+                <!-- Definition of the FOOTER Region of the site  -->
+                <footer>     
+                    <div id="footer">    
+                         <!-- ***FOOTER BLOCK*** -->
+                    
+                    <span>&copy; Copyright Storestuff <?php echo date("Y"); ?> | All Rights Reserved. </span>
+                    
+                    </div>
+                </footer>          
     </body>
 </html>

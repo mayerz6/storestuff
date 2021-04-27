@@ -1,6 +1,6 @@
 <?php 
 
-class UserValidator {
+class FormValidator {
 
     /* UserValidator CLASS Functions */
     /* 1 - Constructor COLLECTS user entered FORM data via POST super global variable  */
@@ -25,7 +25,7 @@ class UserValidator {
     // Test for the existence of these fields being entered within the FORM.
   
        $this->validateName();
-       $this->validateSubject();
+       $this->validateTopic();
        $this->validateEmail();
        $this->validateMessage();
 
@@ -46,7 +46,7 @@ class UserValidator {
 
         } else {
 
-            if(!preg_match('/^[a-zA-Z0-9]{6,15}$/', $rec)){
+            if(!preg_match('/^[a-zA-Z\s]{2,25}$/', $rec)){
                 $errorMsg = "Name field criteria not met!!!";
                   // trigger_error($errorMsg);
                    $this->addError("Name", $errorMsg);
@@ -56,29 +56,28 @@ class UserValidator {
         }
     }
 
-    private function validateSubject(){
+    private function validateTopic(){
 
         /* Remove all empty spaces within user input and store as TMP variable 'REC' */
-            $rec = trim($this->data['subject']);
-            $errorMsg = "Empty subject fields are not allowed!!!";
+            $rec = trim($this->data['topic']);
+            $errorMsg = "Topic selection must be made!!!";
             /* If 'REC' variable is BLANK then record error message */
             if(empty($rec)){
              //   trigger_error($errorMsg);
-                    $this->addError("Subject", $errorMsg);
+                    $this->addError("Topic", $errorMsg);
                     return;
     
             } else {
     
-                if(!preg_match('/^[a-zA-Z0-9]{4,15}$/', $rec)){
-                    $errorMsg = "Subject field criteria not met!!!";
+                if($rec == "-- Select Topic --"){
+                    $errorMsg = "Topic selection must be made!!!";
                       // trigger_error($errorMsg);
-                       $this->addError("Subject", $errorMsg);
+                       $this->addError("Topic", $errorMsg);
                        return; 
                 } 
     
             }
         }
-
 
    
         private function validateEmail(){
@@ -97,7 +96,6 @@ class UserValidator {
                                 return;
                 }
             }
-
         }
     
 
@@ -111,7 +109,7 @@ class UserValidator {
 
         } else {
 
-            if(!preg_match('/^[a-zA-Z0-9]{2,60}$/', $msg)){
+            if(!preg_match('/^[a-zA-Z0-9,.\+\-!:\'\";()\s]{2,60}$/', $msg)){
                 $errorMsg = "Criteria for feedback message fields are not met!!!";
                   //  trigger_error($errMsg);
                     $this->addError("Message", $errorMsg);
