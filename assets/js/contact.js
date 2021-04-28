@@ -65,7 +65,6 @@ formDataDestroy(){
             if(this.status === 200){
                 self.removeSpinner();
                 self.enableSubmitButton();
-                console.log(xhr.responseText);
                 self.renderContent(xhr.responseText);
             }
         }
@@ -91,7 +90,6 @@ formDataDestroy(){
 
     errorTest(record, status, id, field){
 
-       // console.log(id);
         /* Check for successful input validation STATUS */
         if(record !== undefined && status === false){
         /* If ERRORS exist for the specific form field insert the error message within the necessary location. */
@@ -136,7 +134,6 @@ formDataDestroy(){
                     this.validateName(field);
                         break;
                 case 'message':
-                    //    console.log(field.type);
                     this.validateTextArea(field);
                 break;    
             }
@@ -151,7 +148,6 @@ formDataDestroy(){
     }
 
     validateSelection(field){
-      //  console.log(field.value);
         if(field.value === '0'){
             field.style = 'border-left: 4px solid #ec7048; padding-left: 6px';
             field.classList.add('error');
@@ -166,8 +162,6 @@ formDataDestroy(){
 
     /* Email VALIDATION criteria definition */
         validateEmail(field){
-            console.log(field);
-            console.log("Validated!");
             if(field.value.indexOf('@') === -1){
                 field.style = 'border-left: 4px solid #ec7048; padding-left: 6px';
                 field.classList.add('error');
@@ -186,14 +180,12 @@ formDataDestroy(){
                 field.style = 'border-left: 4px solid #ec7048; padding-left: 6px';
                 field.classList.add('error');
             } else {
-                console.log("Validated!");
                 field.style = 'border-left: 4px solid green; padding-left: 6px';
                 document.getElementById('msgErr').innerHTML = " ";
                 field.classList.remove('error');
             }
             
             } else {
-                console.log("Validated!");
                 field.style = 'border-left: 4px solid #ec7048; padding-left: 6px';
                 field.classList.add('error');
                 }
@@ -205,7 +197,6 @@ formDataDestroy(){
                 field.style = 'border-left: 4px solid #ec7048; padding-left: 6px';
                   field.classList.add('error');
             } else {
-                console.log("Validated!");
                 field.style = 'border-left: 4px solid green; padding-left: 6px';
                 document.getElementById('nameErr').innerHTML = " ";
                 field.classList.remove('error');
