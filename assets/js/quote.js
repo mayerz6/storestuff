@@ -18,11 +18,11 @@
              this.output = "";
         
                     /* Validate FORM data input */
-                 this.usrName.addEventListener('blur', () => { /* console.log(this.usrName.value); */ this.validateField(this.usrName) });
-                 this.usrEmail.addEventListener('blur', () => { /* console.log(this.usrName.value); */ this.validateField(this.usrEmail) });
+                 this.usrName.addEventListener('blur', () => { this.validateField(this.usrName) });
+                 this.usrEmail.addEventListener('blur', () => { this.validateField(this.usrEmail) });
                  this.usrQT.addEventListener('keydown', () => { this.validateSelection(this.usrQT) });
-                 this.usrSubject.addEventListener('blur', () => { /* console.log(this.usrName.value); */ this.validateField(this.usrSubject) });
-                 this.usrMsg.addEventListener('blur', () => { /* console.log(this.usrName.value); */ this.validateField(this.usrMsg) });
+                 this.usrSubject.addEventListener('blur', () => { this.validateField(this.usrSubject) });
+                 this.usrMsg.addEventListener('blur', () => { this.validateField(this.usrMsg) });
         
                     /* ONCLICK event handler for FORM submit BUTTON */
                 this.button.addEventListener('click', this.sendResponse.bind(this));
@@ -64,8 +64,6 @@
                 if(this.status === 200){
                     self.removeSpinner();
                     self.enableSubmitButton();
-                    console.log(xhr.output);
-                    console.log (xhr.responseText);
                         /*
                             For DIAGNOSTIC purposes 
                             - console.log (xhr.responseText);
@@ -121,7 +119,6 @@
         
         errorTest(record, status, id, field){
         
-            console.log(id);
             /* Check for successful input validation STATUS */
             if(record !== undefined && status === false){
             /* If ERRORS exist for the specific form field insert the error message within the necessary location. */
@@ -156,7 +153,6 @@
         
         /* Once ALL input field tests have PASSED; render the success message to the page. */
             if(stuff.status === true){
-                //  document.getElementById("response").innerHTML = "Thank You for your Business!!!";
                 document.getElementById("response").innerHTML = "Success - " + stuff.Success;
                 document.getElementById("response").style = "color: green;";
                 this.formDataDestroy();
@@ -170,20 +166,16 @@
                 if(field.value.trim().length > 0){
                     switch(field.name) {
                         case 'email': 
-                        //   console.log(field.type);
                         this.validateEmail(field);
                         break;
                         case 'name':
-                        //    console.log(field.type);
-                        this.validateName(field);
+                         this.validateName(field);
                         break;  
                         case 'subject':
-                            //    console.log(field.type);
-                            this.validateSubject(field);
+                          this.validateSubject(field);
                         break;    
                         case 'message':
-                            //    console.log(field.type);
-                            this.validateTextArea(field);
+                          this.validateTextArea(field);
                         break;    
                     }
                      
@@ -195,8 +187,8 @@
         
         /* Query VALIDATION criteria definition */
         validateSelection(field){
-            //  console.log(field.value);
-              if(field.value === '0'){
+    
+            if(field.value === '0'){
                   field.style = 'border-left: 4px solid #ec7048; padding-left: 6px';
                   field.classList.add('error');
               } else {
@@ -212,9 +204,7 @@
         /* Email VALIDATION criteria definition */
         validateEmail(field){
         
-            console.log(field);
-            console.log("Validated!");
-            if(field.value.indexOf('@') === -1){
+           if(field.value.indexOf('@') === -1){
                 field.style = 'border-left: 4px solid #ec7048; padding-left: 6px';
                  field.classList.add('error');
              } else {
@@ -226,22 +216,19 @@
         
         /* Input VALIDATION criteria definition */
         validateTextArea(field){
-            console.log(field);
+    
             if(field.value.trim().length > 0){
             
                 if(field.value.trim().length > 60){
-                    console.log("Error Found!");
                     field.style = 'border-left: 4px solid #ec7048; padding-left: 6px';
                     field.classList.add('error');
                 } else {
-                    console.log("Validated!");
                     field.style = 'border-left: 4px solid green; padding-left: 6px';
                     document.getElementById('msgErr').innerHTML = " ";
                     field.classList.remove('error');
                 }
             
             } else {
-                console.log("Error Found!");
                 field.style = 'border-left: 4px solid #ec7048; padding-left: 6px';
                 field.classList.add('error');
                 }
@@ -253,20 +240,16 @@
         validateName(field){
         
             if(field.value.trim().length > 0){
-                console.log(field);
                     if(field.value.trim().length > 20){
-                        console.log("Error Found!");
                         field.style = 'border-left: 4px solid #ec7048; padding-left: 6px';
                           field.classList.add('error');
                     } else {
-                        console.log("Validated!");
                         field.style = 'border-left: 4px solid green; padding-left: 6px';
                         document.getElementById('nameErr').innerHTML = " ";
                         field.classList.remove('error');
                     }
         
             } else {
-                console.log('Error Found!');
                 field.style = 'border-left: 4px solid #ec7048; padding-left: 6px';
                 field.classList.add('error');
             }
@@ -276,20 +259,16 @@
         validateSubject(field){
         
             if(field.value.trim().length > 0){
-                console.log(field);
                     if(field.value.trim().length > 20){
-                        console.log("Error Found!");
                         field.style = 'border-left: 4px solid #ec7048; padding-left: 6px';
                           field.classList.add('error');
                     } else {
-                        console.log("Validated!");
                         field.style = 'border-left: 4px solid green; padding-left: 6px';
                         document.getElementById('subjectErr').innerHTML = " ";
                         field.classList.remove('error');
                     }
         
             } else {
-                console.log('Error Found!');
                 field.style = 'border-left: 4px solid #ec7048; padding-left: 6px';
                 field.classList.add('error');
             }
