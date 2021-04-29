@@ -1,5 +1,4 @@
 <?php /* Load external PHP file   */  include 'assets/class/form-validator.php'; 
-/* Load external PHP file   */ // include 'assets/class/stats.php';
 /* Load external PHP file   */  include 'assets/class/user.php'; 
 
 // sleep(5);

@@ -10,8 +10,8 @@ require './assets/PHPMailer/class.phpmaileroauth.php';
 class User {
 
     /* Definition of UNIQUE class properties */
-    private static $email = "admin@athlene.site";
-    private static $pwd = "M@y3rZ.@thl3n3!9a";
+    private static $email = "info@storestuff.site";
+    private static $pwd = "M@y3rZ.S0urc#!9a";
     private static $host = "mail.privateemail.com";
 
     private $subject = "#yT^Qk~1";
@@ -55,6 +55,7 @@ class User {
 
     public function sendEmail($formData){
 
+        /* Collect & Store all POST data as local variables based on their name. */
         extract($formData);
 
         //PHPMailer Object
@@ -62,11 +63,7 @@ class User {
         $mail->isSMTP();
         $mail->isHTML(true);
 
-  
-        $str = "Thank you $name for sending your feedback. <br> ";
-        $str .= "We do appreciate you reaching out to us and will respond, <br>";
-        $str .= "to your query shortly. <br><br>";
-        $str .= "Original Message: <br><br><br>";
+
       //  $str .= "$this->msg";
 
       //  echo "Message sent! <br><br><b>$str</b>";
@@ -123,12 +120,15 @@ class User {
         //Set the subject line
         $mail->Subject = $topic;
        // $mail->Body = "<h1>" . $formData['name'] .  "</h1><br><p><b>Contact: </b>" . $contact . "</p><br><p><b>Email: </b>" . $email . "</p><p><b>Requested Topic: </b>" . $usrTopic . "</p><p><b>Academic Level: </b>" . $usrLevel . "</p><p><b>Time Requested: </b>" . $usrSessTime . "</p><p><b>Student Designation: </b>" . $stuDef . "</p><h6>Please review the received message below.</h6><br>" . $formData['message'];
-        $mail->Body = "<h1>Message Author: " . $name . " - " . $email . "</h1><br>"
-                    . "<span>Please review the received message below.</span><br>" 
-                    . "<p>" . $message ."</p>";
+        $mail->Body = "<span>Please review the received message below.</span><br>"
+                    . "<h4>Message Author: </h4><span>" . $name . " - " . $email . "</span><br>" 
+                    . "<h4>Message Details: </h4><p>" . $message ."</p>";
                 
-        //$mail->AltBody = "This is the plain text version of the email content";
-
+        $str = "Thank you $name for sending your feedback. <br> ";
+        $str .= "We do appreciate you reaching out to us and will respond, <br>";
+        $str .= "to your query shortly. <br><br>";
+        $str .= "Original Message: <br><br><br>";
+      
         try  {
             $mail->send();
 

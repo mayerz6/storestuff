@@ -84,14 +84,12 @@ class FormValidator {
             $rec = trim($this->data['email']);
             $errorMsg = "Emtpy email address fields are not allowed!!!";
             if(empty($rec)){
-             //   trigger_error($errorMsg);
                     $this->addError("Email", $errorMsg);
                     return;
             } else {
                 
                 if(!filter_var($rec, FILTER_VALIDATE_EMAIL)){
                     $errorMsg = "Email entered is not valid!!!";
-                       // trigger_error($errorMsg);
                             $this->addError("Email", $errorMsg);
                                 return;
                 }
@@ -103,15 +101,13 @@ class FormValidator {
         $msg = trim($this->data['message']);
         $errorMsg = "Empty message fields are not allowed!!!";
         if(empty($msg)){
-          //  trigger_error($errorMsg);
                 $this->addError("Message", $errorMsg);
                 return;
 
         } else {
 
-            if(!preg_match('/^[a-zA-Z0-9,.\+\-!:\'\";()\s]{2,60}$/', $msg)){
+            if(!preg_match('/^[a-zA-Z0-9,.\+\-!?:\'\";()\s]{2,60}$/', $msg)){
                 $errorMsg = "Criteria for feedback message fields are not met!!!";
-                  //  trigger_error($errMsg);
                     $this->addError("Message", $errorMsg);
                     return;
 

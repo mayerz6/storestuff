@@ -41,7 +41,6 @@ class QuoteValidator {
         $errorMsg = "Empty name fields are not allowed!!!";
         /* If 'REC' variable is BLANK then record error message */
         if(empty($rec)){
-         //   trigger_error($errorMsg);
                 $this->addError("Name", $errorMsg);
                 return;
 
@@ -49,7 +48,6 @@ class QuoteValidator {
 
             if(!preg_match('/^[a-zA-Z\s]{2,25}$/', $rec)){
                 $errorMsg = "Name field criteria not met!!!";
-                  // trigger_error($errorMsg);
                    $this->addError("Name", $errorMsg);
                    return; 
             } 
@@ -63,7 +61,6 @@ class QuoteValidator {
             $errorMsg = "Empty subject fields are not allowed!!!";
             /* If 'REC' variable is BLANK then record error message */
             if(empty($rec)){
-             //   trigger_error($errorMsg);
                     $this->addError("Subject", $errorMsg);
                     return;
     
@@ -71,7 +68,6 @@ class QuoteValidator {
     
                 if(!preg_match('/^[a-zA-Z\s]{2,35}$/', $rec)){
                     $errorMsg = "Subject field criteria not met!!!";
-                      // trigger_error($errorMsg);
                        $this->addError("Subject", $errorMsg);
                        return; 
                 } 
@@ -83,13 +79,10 @@ class QuoteValidator {
     private function validateTopic(){
 
         /* Remove all empty spaces within user input and store as TMP variable 'REC' */
-          //  $rec = trim($this->data['topic']);
             $errorMsg = "No topic was selected!!!";
             /* If 'REC' variable is BLANK then record error message */
             if($this->data['query'] == "-- Query Selection --") {
-                  //  $errorMsg = "Subject field criteria not met!!!";
-                      // trigger_error($errorMsg);
-                       $this->addError("Query", $errorMsg);
+                $this->addError("Query", $errorMsg);
                        return; 
                 } 
     
@@ -99,14 +92,12 @@ class QuoteValidator {
             $rec = trim($this->data['email']);
             $errorMsg = "Emtpy email address fields are not allowed!!!";
             if(empty($rec)){
-             //   trigger_error($errorMsg);
                     $this->addError("Email", $errorMsg);
                     return;
             } else {
                 
                 if(!filter_var($rec, FILTER_VALIDATE_EMAIL)){
                     $errorMsg = "Email entered is not valid!!!";
-                       // trigger_error($errorMsg);
                             $this->addError("Email", $errorMsg);
                                 return;
                 }
@@ -119,15 +110,13 @@ class QuoteValidator {
         $msg = trim($this->data['message']);
         $errorMsg = "Empty message fields are not allowed!!!";
         if(empty($msg)){
-          //  trigger_error($errorMsg);
                 $this->addError("Message", $errorMsg);
                 return;
 
         } else {
 
-            if(!preg_match('/^$|^[A-Za-z0-9,.\+\-!:\'\";()\s]{2,60}$/', $msg)){
+            if(!preg_match('/^$|^[A-Za-z0-9,.\+\-!?:\'\";()\s]{2,60}$/', $msg)){
                 $errorMsg = "Criteria for feedback message fields are not met!!!";
-                  //  trigger_error($errMsg);
                     $this->addError("Message", $errorMsg);
                     return;
 
@@ -140,6 +129,3 @@ class QuoteValidator {
     }
 
 }
-
-// echo "Here is " . $instance->showUser();
-

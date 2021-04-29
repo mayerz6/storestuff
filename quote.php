@@ -1,5 +1,4 @@
 <?php /* Load external PHP file   */  include 'assets/class/quote-validator.php'; 
-/* Load external PHP file   */ // include 'assets/class/stats.php';
 /* Load external PHP file   */  include 'assets/class/user.php'; 
 
 // sleep(5);
@@ -11,8 +10,6 @@ if(!is_ajax_request()) { exit; }
 
 if(isset($_POST)){
     
-  //  echo $_POST["name"] ?? "Missing Form Data!!!";
-
     $test = new QuoteValidator($_POST);
       $errors = $test->validateForm();
    
