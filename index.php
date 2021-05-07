@@ -5,11 +5,20 @@
 <html lang="en">
 
             <head>
-                <meta name="viewport" content="width=device-width,initial-scale=1.0">
-                <title>Store Stuff</title>
+                
+                <title>Store Stuff | Storage Spaces For Rent</title>
+                
                 <link rel="icon" href="favicon.png" type="image/gif" sizes="16x16">    
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
                 <link rel="stylesheet" href="assets/css/styles.css" />    
+                
+                <meta name="viewport" content="width=device-width,initial-scale=1.0">
+                <!-- Social Profile Cards -->
+                <meta name="twitter:card" content="">
+                <meta name="twitter:card" content="">
+                <meta name="twitter:card" content="">
+                <meta name="twitter:card" content="">
+                <!--  -->
                 <script defer src="assets/js/quote.js"></script>
                 <script defer src="assets/js/nav.js"></script>
             </head>
@@ -18,14 +27,14 @@
 
         <!-- *** HEADER BLOCK *** -->
         <header>
-               <a id="logo-link" href="./"><img id="logo" src="favicon.png" alt="logo" /></a>
-                    <div id="menu-icon">
+               <a id="logo-link" href="./"><img id="logo" src="favicon.png" alt="store_stuff_logo" /></a>
+                    <div id="menu-icon"> <!-- Icon to illustrate collapsed navbar -->
                         <div class="line"></div>
                         <div class="line"></div>
                         <div class="line"></div>
                     </div>
                     <nav class="hidden">
-                        <ul id="nav">
+                        <ul id="nav"> <!-- List of navbar links -->
                             <li><a class="active" href="./">Request A Quote</a></li>
                             <li><a href="./services.php">Services</a></li>
                             <li><a href="./contact.php">Contact</a></li>
@@ -37,7 +46,7 @@
 
         <!-- *** MAIN CONTENT BLOCK *** -->
         <div id="main">
-            <h1>Storage Space For Rent</h1>
+            <h1>Storage Spaces For Rent</h1>
                 <section id="screen">
                     <p>Request A Quote</p>
                                 
@@ -45,7 +54,7 @@
                                     
                                   <em><h4>Let's Protect Your Stuff!</h4></em>
                                  
-                        <div id="fbRegion">
+                        <div id="fbRegion"> <!-- User feedback form -->
                             <form action="" name="reqForm" method="" id="reqForm">
                                <label>Name: </label><input id="name" type="text" name="name" value="<?php echo htmlspecialchars($_POST['name'] ?? ''); ?>"  />
                                <b id="nameErr"></b>
@@ -78,8 +87,7 @@
                         </div>
                  </section>
 
-                 <section id="details">
-                
+                 <section id="details"> <!-- Company services -->
                         <div>
                             <section>
                                 <h2 id="storage">Storage</h2>

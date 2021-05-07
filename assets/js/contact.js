@@ -15,7 +15,7 @@ class Contact{
         /* Instantiate FORM event listener functionality */
         this.usrName.addEventListener('blur', () => { this.validateField(this.usrName) });
         this.usrEmail.addEventListener('blur', () => { this.validateField(this.usrEmail) });
-        this.usrQuery.addEventListener('keydown', () => { this.validateSelection(this.usrQuery) });
+        this.usrQuery.addEventListener('change', () => { this.validateSelection(this.usrQuery) });
         this.usrMsg.addEventListener('blur', () => { this.validateField(this.usrMsg) });
         this.btnSubmit.addEventListener('click', this.sendResponse.bind(this));
     }

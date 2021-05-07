@@ -100,10 +100,10 @@ class User {
 
         //From email address and name
         $mail->From = User::getEmail();
-        $mail->FromName = "Athlene Learning - Tutelage Request Message";
+        $mail->FromName = "Storestuff Rentals";
 
         //To address and name
-        $mail->addAddress("admin@athlene.site", "Athlene Learning");
+        $mail->addAddress(User::getEmail(), "Storestuff Rentals");
         // $mail->addAddress("info@larrymayers.site", "Larry Mayers"); //Recipient name is optional
 
         //Address to which recipient will reply
@@ -165,14 +165,6 @@ class User {
         $mail->isHTML(true);
 
   
-        $str = "Thank you $name for sending your feedback. <br> ";
-        $str .= "We do appreciate you reaching out to us and will respond, <br>";
-        $str .= "to your query shortly. <br><br>";
-        $str .= "Original Message: <br><br><br>";
-      //  $str .= "$this->msg";
-
-      //  echo "Message sent! <br><br><b>$str</b>";
-
         //Enable SMTP debugging
         // 0 = off (for production use)
         // 1 = client messages
@@ -205,10 +197,10 @@ class User {
 
         //From email address and name
         $mail->From = User::getEmail();
-        $mail->FromName = "Athlene Learning - Tutelage Request Message";
+        $mail->FromName = "Storestuff Rentals";
 
         //To address and name
-        $mail->addAddress("admin@athlene.site", "Athlene Learning");
+        $mail->addAddress(User::getEmail(), "Storestuff Rentals");
         // $mail->addAddress("info@larrymayers.site", "Larry Mayers"); //Recipient name is optional
 
         //Address to which recipient will reply
@@ -222,13 +214,12 @@ class User {
         //Send HTML or Plain Text email
         $mail->isHTML(true);
 
-        //Set the subject line
-        $mail->Subject = $query;
-       // $mail->Body = "<h1>" . $formData['name'] .  "</h1><br><p><b>Contact: </b>" . $contact . "</p><br><p><b>Email: </b>" . $email . "</p><p><b>Requested Topic: </b>" . $usrTopic . "</p><p><b>Academic Level: </b>" . $usrLevel . "</p><p><b>Time Requested: </b>" . $usrSessTime . "</p><p><b>Student Designation: </b>" . $stuDef . "</p><h6>Please review the received message below.</h6><br>" . $formData['message'];
-        $mail->Body = "<h1>Message Author: " . $name . " - " . $email . "</h1><br>"
-                    . "<span>Please review the received message below.</span><br>" 
-                    . "<p>" . $message ."</p>";
-                
+        $mail->Subject = $topic;
+        // $mail->Body = "<h1>" . $formData['name'] .  "</h1><br><p><b>Contact: </b>" . $contact . "</p><br><p><b>Email: </b>" . $email . "</p><p><b>Requested Topic: </b>" . $usrTopic . "</p><p><b>Academic Level: </b>" . $usrLevel . "</p><p><b>Time Requested: </b>" . $usrSessTime . "</p><p><b>Student Designation: </b>" . $stuDef . "</p><h6>Please review the received message below.</h6><br>" . $formData['message'];
+         $mail->Body = "<span>Please review the received message below.</span><br>"
+                     . "<h4>Message Author: </h4><span>" . $name . " - " . $email . "</span><br>" 
+                     . "<h4>Message Details: </h4><p>" . $message ."</p>";
+                 
         //$mail->AltBody = "This is the plain text version of the email content";
 
         try  {

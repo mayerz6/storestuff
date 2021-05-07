@@ -20,7 +20,7 @@
                     /* Validate FORM data input */
                  this.usrName.addEventListener('blur', () => { this.validateField(this.usrName) });
                  this.usrEmail.addEventListener('blur', () => { this.validateField(this.usrEmail) });
-                 this.usrQT.addEventListener('keydown', () => { this.validateSelection(this.usrQT) });
+                 this.usrQT.addEventListener('change', () => { this.validateSelection(this.usrQT) });
                  this.usrSubject.addEventListener('blur', () => { this.validateField(this.usrSubject) });
                  this.usrMsg.addEventListener('blur', () => { this.validateField(this.usrMsg) });
         
