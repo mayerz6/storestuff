@@ -5,11 +5,20 @@
 <html lang="en">
 
     <head>
+
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>Store Stuff</title>
+        <meta name="description" content="Secure storage spaces for rent" >
+        <meta name="keywords" content="storage spaces secure rental Store Stuff">
+        <meta name="author" content="Larry Mayers">
+
+        <title>Contact Store Stuff - Store Stuff | Storage Spaces For Rent</title>
+      
         <link rel="icon" href="favicon.png" type="image/gif" sizes="16x16">    
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="assets/css/styles.css" />    
+        
+        
         <script defer src="assets/js/nav.js"></script>
         <script defer src="assets/js/contact.js"></script>
     </head>
@@ -36,6 +45,7 @@
 
         <!-- *** MAIN CONTENT BLOCK *** -->
         <div id="main">
+        
             <h1>Storage Space For Rent</h1>
                 <section id="screen">
                     <p>Have Any Questions</p>

@@ -5,7 +5,7 @@
 
     <head>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>Store Stuff</title>
+        <title>Storage Services - Store Stuff | Storage Spaces For Rent</title>
         <link rel="icon" href="favicon.png" type="image/gif" sizes="16x16">    
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
             <link rel="stylesheet" href="./assets/css/styles.css" />  
