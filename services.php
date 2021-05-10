@@ -4,12 +4,46 @@
 <html lang="en">
 
     <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="description" content="Secure storage spaces for rent" >
+        <meta name="keywords" content="storage spaces secure rental Store Stuff">
+        <meta name="author" content="Larry Mayers">
+
         <title>Storage Services - Store Stuff | Storage Spaces For Rent</title>
+        
         <link rel="icon" href="favicon.png" type="image/gif" sizes="16x16">    
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-            <link rel="stylesheet" href="./assets/css/styles.css" />  
-            <script defer src="assets/js/nav.js"></script>
+        <link rel="stylesheet" href="./assets/css/styles.css" />  
+          
+        <meta name="keywords" content>
+        <meta name="description" content="Looking for quick storage space to rent? Storestuff Spaces is the affordable solution for you. Secure, Convenient...Yours!">
+        <meta name="title" content="Storestuff Rental Services">
+        <meta name="copyright" content="© Copyright Storestuff 2021 | All Rights Reserved. ">
+        <meta name="robots" content="noindex, nofollow">
+        <!-- Social Profile Cards -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@mayerz">
+        <meta name="twitter:title" content="Storestuff Rental Services">
+        <meta name="twitter:description" content="Looking for quick storage space? Storestuff Spaces is the affordable solution for you. Secure, Convenient...Yours!">
+        <meta name="twitter:creator" content="@mayerz">
+
+        <!-- Twitter Summary card images must be at least 120x120px -->
+        <meta name="twitter:image" content="https://www.storestuff.site/assets/img/warehouse-mini.png">
+
+        <!-- Open Graph data -->
+        <meta property="og:title" content="Storestuff Rental Services" />
+        <meta property="og:type" content />
+        <meta property="og:url" content="https://www.storestuff.site/" />
+        <meta property="og:image" content="https://www.storestuff.site/assets/img/warehouse-mini.png" />
+        <meta property="og:description" content="Looking for quick storage space? Storestuff Spaces is the affordable solution for you. Secure, Convenient...Yours!" />
+        <meta property="og:site_name" content="Storestuff Rentals" />
+
+              <!--  <meta property="fb:admins" content="Facebook numeric ID" />  -->
+
+        <script defer src="assets/js/nav.js"></script>
+
     </head>
 
     <body>
