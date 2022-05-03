@@ -1,71 +1,5 @@
 <?php 
 
-/* Definition of User CLASS */
-class User {
-
-    /* Definition of UNIQUE class properties */
-    private $email = "test@user.com";
-    private $username = "testuser";
-
-  /* Definition of User CLASS contructor function */
-     public function __construct($usrEmail, $usrName){
-        $this->email = $usrEmail;
-        $this->username = $usrName;
-    }
-
-    /* Getter Function  */
-    public function getEmail(){
-        return $this->email;
-    }
-    /* Setter Function */
-    public function setEmail($email){
-        if(strpos($email, '@') > -1){
-            $this->email = $email;
-        } else {
-            $this->email = "no-valid-email@entered.com";
-        }
-    }
-
-    public function getUsername(){
-        return $this->username;
-    }
-
-    public function setUsername($username){
-        if(strlen($username) > 0){
-            $this->username = $username;
-        } else {
-            $this->username = "Bad Username Entered";
-        }
-    }
-
-    /* Definition of showUser function */
-    public function showUser(){
-        return "$this->email and $this->username exists within the database";
-    }
-}
-
-class Visitor extends User{
-
-    public $userId;
-
-    public function __construct($usrId, $usrEmail, $usrName){
-        $this->userId = $usrId;
-        parent::__construct($usrEmail, $usrName);
-    }
-
-}
-
-class Customer extends User{
-
-    public $customerId;
-
-    public function __construct($customerId, $usrEmail, $usrName){
-        $this->customer = $customerId;
-        parent::__construct($usrEmail, $usrName);
-    }
-
-}
-
 class UserValidator {
 
     /* UserValidator CLASS Functions */
@@ -87,17 +21,13 @@ class UserValidator {
     }
 
     public function validateForm(){
-    // Test for the existence of these fields being entered within the FORM.
-       foreach(self::$fields as $field){
-           if(!array_key_exists($field, $this->data)){
-                trigger_error("$field is not present in data!!!");
-                    return;
-           }
-       } 
 
+    // Test for the existence of these fields being entered within the FORM.
+  
        $this->validateName();
        $this->validateEmail();
        $this->validateMessage();
+
 
        return $this->errors;
 
@@ -172,9 +102,5 @@ class UserValidator {
 }
 
 
-$instance = new Visitor("001", "info@larrymayers.site", "mayerz6");
-
 // echo "Here is " . $instance->showUser();
-
-?>
 
